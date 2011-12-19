@@ -71,7 +71,8 @@ namespace Jigoku.ORM.Repository
 
         public void Dispose()
         {
-            session.Dispose();
+            if(session != null)
+                session.Dispose();
         }
     }
 }
